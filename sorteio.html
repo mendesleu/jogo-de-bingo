@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sorteio do Bingo</title>
+
+    <link rel="stylesheet" href="/css/style.css">
+    
+    <script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
+
+    <script>
+        let i;
+        let num;
+        let numerosSorteados;
+    </script>
+
+    <style>
+        .quadrado.bolota{
+            border: none;
+            background-color: transparent;
+        }
+
+        .quadrado{
+            width: 50px;
+            height: 50px;
+        }
+
+        .bolinha{
+            width: 45px;
+            height: 45px;
+
+            font-size: 30px;
+        }
+    </style>
+
+</head>
+<body>
+
+    <section class="sorteioBola">
+        <article class=painelSorteio>
+            <div class="bolaSorteada" id="bolaSorteada"></div>
+            <div>
+                <button class="botoes" onclick="sortearBolinha()">Bolinha</button>
+                <button class="botoes" onclick="location.reload()">Resetar</button>
+            </div>
+        </article>
+    </section>
+
+    <section class="containerBolinhas">
+
+        <article class="linhaBolinhas">
+            <div class="quadrado letraB">B</div>
+            <div id="repeatLetraB" class="repeticao"></div>
+
+            <script>
+                for(i = 0; i < 15; i ++){
+                    num = i + 1;
+                    $('#repeatLetraB').append(
+                        `
+                            <div id="bola${num}" class="quadrado bolota">
+                                <div class="bolinha letraB">${num}</div>
+                            </div>
+                        `
+                    )
+                }
+            </script>
+        </article>
+        
+        <article class="linhaBolinhas">
+            <div class="quadrado letraI">I</div>
+            <div id="repeatLetraI" class="repeticao"></div>
+
+            <script>
+                for(i = 15; i < 30; i ++){
+                    num = i + 1;
+                    $('#repeatLetraI').append(
+                        `
+                            <div id="bola${num}" class="quadrado bolota">
+                                <div class="bolinha letraI">${num}</div>
+                            </div>
+                        `
+                    )
+                }
+            </script>
+        </article>
+
+        <article class="linhaBolinhas">
+            <div class="quadrado letraN">N</div>
+            <div id="repeatLetraN" class="repeticao"></div>
+
+            <script>
+                for(i = 30; i < 45; i ++){
+                    num = i + 1;
+                    $('#repeatLetraN').append(
+                        `
+                            <div id="bola${num}" class="quadrado bolota">
+                                <div class="bolinha letraN">${num}</div>
+                            </div>
+                        `
+                    )
+                }
+            </script>
+        </article>
+        
+        <article class="linhaBolinhas">
+            <div class="quadrado letraG">G</div>
+            <div id="repeatLetraG" class="repeticao"></div>
+
+            <script>
+                for(i = 45; i < 60; i ++){
+                    num = i + 1;
+                    $('#repeatLetraG').append(
+                        `
+                            <div id="bola${num}" class="quadrado bolota">
+                                <div class="bolinha letraG">${num}</div>
+                            </div>
+                        `
+                    )
+                }
+            </script>
+        </article>
+        
+        <article class="linhaBolinhas">
+            <div class="quadrado letraO">O</div>
+            <div id="repeatLetraO" class="repeticao"></div>
+
+            <script>
+                for(i = 60; i < 75; i ++){
+                    num = i + 1;
+                    $('#repeatLetraO').append(
+                        `
+                            <div id="bola${num}" class="quadrado bolota">
+                                <div class="bolinha letraO">${num}</div>
+                            </div>
+                        `
+                    )
+                }
+            </script>
+        </article>
+
+    </section>
+
+    <script src="/js/gerarNumerosCartela.js"></script>
+    <script src="/js/sortearBolinha.js"></script>
+    
+</body>
+</html>

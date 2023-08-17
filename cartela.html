@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cartela do Bingo</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
+
+    <script>
+        let i;
+        let num;
+        let numerosSorteados;
+    </script>
+
+</head>
+<body>
+
+    <section class="cartela">
+        <article id="letraB">
+            <div class="quadrado letraB">B</div>
+        </article>
+        <article id="letraI">
+            <div class="quadrado letraI">I</div>
+        </article>
+        <article id="letraN">
+            <div class="quadrado letraN">N</div>
+        </article>
+        <article id="letraG">
+            <div class="quadrado letraG">G</div>
+        </article>
+        <article id="letraO">
+            <div class="quadrado letraO">O</div>
+        </article>
+    </section>
+
+    <section class="secBotoes">
+        <button class="botoes" onclick="resetMarcacao()">Reset</button>
+        <button class="botoes" onclick="location.reload()">Nova Cartela</button>
+    </section>
+
+    <script src="/js/gerarNumerosCartela.js"></script>
+    <script src="/js/marcarBloco.js"></script>
+    
+</body>
+</html>

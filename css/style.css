@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    height: 100vh;
+
+    background-color: rgb(252, 252, 252);
+}
+
+.cartela{
+    display: flex;
+}
+
+.quadrado{
+    width: 70px;
+    height: 70px;
+
+    border: 1px solid rgb(156, 156, 156);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 35px;
+    font-weight: 600;
+
+    cursor: pointer;
+}
+
+.marcador{
+    position: absolute;
+    z-index: 2;
+    font-size: 55px;
+    color: rgb(255, 0, 0);
+
+    display: none;
+}
+
+.secBotoes{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-top: 20px;
+}
+
+.botoes{
+    background-color: #000;
+    color: #fff;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.botoes:first-child{
+    margin-right: 10px;
+}
+
+.letraB{
+    background-color: rgb(255, 164, 164);
+}
+
+.letraI{
+    background-color: rgb(172, 255, 177);
+}
+
+.letraN{
+    background-color: rgb(248, 255, 180);
+}
+
+.letraG{
+    background-color: rgb(209, 208, 255);
+}
+
+.letraO{
+    background-color: rgb(255, 212, 177);
+}
+
+.linhaBolinhas{
+    display: flex;
+}
+
+.bolinha{
+    width: 65px;
+    height: 65px;
+
+    border-radius: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.containerBolinhas{
+    width: 100%;
+    background-color: #ffffff;
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.sorteioBola{
+    width: 100%;
+    height: 400px;
+
+    display: flex;
+    align-items: center;
+}
+
+.bolaSorteada{
+    font-size: 220px;
+    font-weight: 700;
+
+    height: 300px;
+}
+
+.painelSorteio{
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.repeticao{
+    display: flex;
+}
+
+.bolota{
+    display: none;
+}
